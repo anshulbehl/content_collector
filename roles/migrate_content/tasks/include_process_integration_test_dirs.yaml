@@ -8,6 +8,6 @@
 - name: Copy integration targets directory contents when applicable to collection
   copy:
     src: "{{ ansible_source_directory}}/test/integration/targets/{{ item['path']|basename|replace('.py','') }}"
-    dest: "{{ collection_parent }}/test/integration/targets/{{ item['path']|basename|replace('.py','') }}"
+    dest: "{{ collection_parent }}/test/integration/targets/
   when: st['stat']['exists']
 
